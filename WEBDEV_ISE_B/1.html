@@ -1,0 +1,119 @@
+<!doctype html>
+<!-- DOCTYPE is written to tell
+ the browser that this is an html document-->
+<!-- most of the html tags have a opening tag and a closing tag-->
+ <!--All the meta information regarding your website stays inside the head tag-->
+ <head>
+    <!--title is used to set the title of the webpage-->
+    <title>My first webpage</title>
+
+ </head>
+ <!-- Whatever we write in the body it is visible in the webpage
+   -->
+    <body>
+        <h1> SNPSU-ISE-B-6TH SEMESTER </h1>
+        <p>This is my first website & we are learning HTML.<br>//break  used to brak the line of the tag
+        we are at SNPSU 8TH FLOOR.<br>
+    today is the first day of the web developement training</p>//this is the p tag 
+    <h1>Main heading</h1>
+    <h2>Sub heading</h2>
+    <h3>Snmaller Heading</h3>
+    <h4>Even smaller heading</h4>
+    <h5>Tiny heading</h5>
+    <h6>smallest heading</h6>
+    <p><b>BOLD TEXT</b></p>
+    <p><i> Italics</i></p>
+    <p><u> underlined text</u></p>
+    <p><small>Smaller text</small></p>
+    <p><del> Deleted text</del></p>
+    <!-- For the power of the number<sup> is used -->
+    <p>2<sup>3</sup></p>
+    <!-- For the power down like log2n we can use -->
+    <p>log<sub>2</sub>n</p>
+    <!-- for t add the link to the webpage we use the anchor tag -->
+     <a href="https://www.google.com">click hear</a>
+     <!-- if i want to open link in different page-->
+      <a href="https://www.google.com" target="_blank">click hear</a>
+      <br>
+      
+      <!-- for the in the same folder -->
+        <a href="about.html">About page</a>
+        <!-- Adding the image to the html -->
+         <img src="https://www.pinterest.com/mikeyvq35/bmw" alt="bmw" width="200px" height="300px">
+
+         <!-- list  -->
+              <!-- Types of lists -->
+               
+ <!-- for writing the different list we can simply use li* no of list -->
+      <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ol>
+
+      <ul>
+        <li>Frontend
+            <ul> 
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+            </ul>
+        </li>
+        <li>Backend
+            <ul> 
+                <li>Node.js</li>
+                <li>JDBC</li>
+                <li>JS</li>
+            </ul>
+        </li>
+      </ul>
+
+      <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Course</th>
+            </tr>
+            <tr>
+                <td>AMIT</td>
+                <td>ISE</td>
+                <td>Machine learning</td>
+            </tr>
+      </table>
+      <br>
+
+      <!-- Form Example -->
+       <!--GET POST PATCH DELETE HTTP requests -->
+       
+       <form action="/submit" method="post"></form>
+       <!-- For the visible what we are writting -->
+        <!-- for the suggestion given inside the box we use place holder and make it mandatory we use requirrw -->
+         <label for="name">Name:</label>
+         <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <br>
+        <label for="email">Email:</label>
+         <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <br>
+        <label for="password">Password:</label>
+         <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <br>
+        <input type="radio" name ="gender" value="male"> Male
+        <input type="radio" name ="gender" value="female"> Female
+        <br>
+        <input type="checkbox" name="subscribe" > Subscribe to our weekly magzine
+        <br>
+        <!-- for the drop down we use the select tag -->
+         <label for="course">Choose a course:</label>
+         <select id=""course" name="course">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JS</option>
+
+            </select>
+            <textarea rows="4" cols="50" placeholder="Enter your message here"></textarea>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            
+
+  </body>
+</html>
