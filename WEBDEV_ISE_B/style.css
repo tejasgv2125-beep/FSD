@@ -1,0 +1,7 @@
+body{
+    background-color: aquamarine;
+    /* it is deafault to make the margin and padding as zero
+     */
+    padding:0;
+    margin: 0;
+}

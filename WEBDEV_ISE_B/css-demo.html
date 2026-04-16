@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- External CSS -->
+            <!-- for the external css we use the link tag -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Internal CSS -->
+    <!-- for the style tag we use the style tag -->
+    <style>
+         /* first we need to write the tag and then change the text */
+        p {
+        font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background: rgb(191, 184, 184);
+      }
+
+        /* if there is id then we use # tag */
+        #btn{
+            padding: 10px;
+            border-radius: 10px;
+            border:none;
+            background-color:wheat;
+            color:beige;
+            font-size: 20px;
+
+        }
+        /* if there is class then we use .tag */
+        .btn{
+            background: orange;
+            border:none;
+            padding: 20px;
+            border-radius: 5px;
+        }
+            </style>
+</head>
+<body>
+    <!-- Inline Css -->
+     <!-- ⭐Inline CSS is used to write the css code inside the tag istself -->
+     <h1 style="color:blue; text-align:center;">This is heading</h1>
+     <a style="text-decoration: none;"
+      href="https://www.google.com" style="color:green;">Google</a>
+
+      <!-- for the long paragraph we use lorem -->
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facere nulla illo nobis 
+        necessitatibus vero inventore ab amet a perferendis ipsam odio,
+         itaque fuga voluptate dignissimos accusamus adipisci eius dolorem.</p>
+         <button id="btn">Click me</button>
+         <button class="btn">Register</button>
+</body>
+</html>
