@@ -490,3 +490,27 @@ body {
     display: flex;                /* Group of links on the right */
     gap: 10px;                    /* Space between link badges */
 }
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .app-container{
+        flex-direction: column;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .sidebar.collapsed{
+        width: 100%;
+    }
+    .stats-grid{
+        grid-template-columns: 1fr;
+    }
+    .topic-item{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:15px;
+    }
+    .topic-links{
+        align-self: flex-end;
+    }
+    
+}
