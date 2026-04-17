@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Example</title>
+  </head>
+  <body>
+    <h2 id="welcome">Hello Students!!!!</h2>
+    <!-- Inline Javascript is written inside the html just before the body
+      tag closing inside <script> tag -->
+
+    <script>
+      // Inline Script: Because we are inside the same HTML file
+      document.getElementById("welcome").innerText = "Welcome to JS";
+      // Variables [let, var, const]
+      // DTL -> Dynamically Typed Language [similar to python]
+      let name = "Pranav"; // String
+      let age = 21; // Number
+      const PI = 3.14; // Constant
+      let isStudent = true; // Boolean
+      console.log(name, age, PI, isStudent);
+      var x = 22; // Very old syntax & nowadays we don't use it
+
+      // Operators
+      let a = 10,
+        b = 20;
+      console.log(a + b);
+      console.log(a > b);
+      console.log(a > 5 && b < 30);
+
+      // Functions
+      function displayName(name) {
+        return "Hello " + name + "!";
+      }
+      // Function call
+      console.log(displayName("Varada")); // Hello Varada
+
+      // function to add two numbers
+      function addTwoNumbers(a, b) {
+        return a + b;
+      }
+      const result = addTwoNumbers(10, 20);
+      console.log("The sum is:" + result);
+
+      // Create a function to find the area of a circle
+      function areaOfCircle(r) {
+        const PI = 3.14;
+        return PI * r * r;
+      }
+      console.log("The area of circle: " + areaOfCircle(5)+" sq. units");
+    </script>
+  </body>
+</html>

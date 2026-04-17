@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Arial;
+            background: rgb(198, 196, 196);
+            display: flex;
+
+    
+            justify-content: center;
+            padding-top: 30px;
+            transition: 0.3s;
+        }
+        .container{
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            justify-items: center;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(8, 7, 7, 0.1);
+            width: 350px;
+            text-shadow: black;/*Adds a subtle shadow to the text in the container*/
+        }   
+        .dark{
+            background: black;
+             color: rgb(255, 255, 255);/*Changes the text color of the container to white in dark mode*/
+           
+        }
+        .dark .container{
+            background: rgb(79, 75, 75);/*Changes the background color of the container to black in dark mode*/
+            
+        }
+        h1{
+
+            margin-bottom: 10px;/*Adds space below the heading*/
+        }
+        button{
+            padding: 6px 12px;/*Adds padding to the buttons*/
+            margin:5px;/*Adds space around the buttons*/
+            border:none;/*Removes the default border from the buttons*/
+            border-radius: 5px;/*Adds rounded corners to the buttons*/
+            background: blue;/*Sets the background color of the buttons to blue*/
+            color: white;/*Sets the text color of the buttons to white*/
+            cursor: pointer;/*Changes the cursor to a pointer when hovering over the button*/
+
+        }
+        button:hover{
+            background: rgb(21, 21, 114);/*Changes the background color of the buttons to dark blue when hovered*/
+        }
+        input,textarea{
+            width: 100%;/*Sets the width of input and textarea elements to 100% of their container*/
+            padding: 5px;/*Adds padding to the input and textarea elements*/
+            margin-top: 5px;/*Adds vertical space around the input and textarea elements*/
+            border:1px solid #ccc;/*Adds a light gray border to the input and textarea elements*/
+            border-radius: 5px;/*Adds rounded corners to the input and textarea elements*/
+        }
+        ul{
+            text-align:left;/*Aligns the text in the unordered list to the left*/
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Dashboard</h1>
+        <!-- buttons -->
+         
+         <button onclick="toggleMode()">🌗Mode</button>
+         <button onclick="changeColor()">🎨Color</button>
+         <!-- Clock -->
+          <h2 id="clock"></h2>
+          <!-- hr horizontal line -->
+    </hr>
+    <!-- To Do List -->
+     <h3>📝To-Do List</h3>
+     <input id="task" placeholder="Enter a task"/>
+     <button onclick="addTask()">Add</button>
+     <ul id="list"></ul>
+</hr>
+<!-- Password -->
+ <h3>🔒Show or hide password</h3>
+    <input type="password" id="pass" placeholder="Enter your password"/>
+    <button onclick="togglePassword()">Show/Hide</button>
+</hr>
+<!-- Counter for the counting number of characters -->
+ <h3>🔢Character Counter</h3>
+ <textarea id="text" oninput="countChars()" placeholder="Enter the text"></textarea>
+ <p>Count <span id="count">0</span></p>       
+    </div>
+    <script>
+        //🌗Dark mode
+        function toggleMode(){
+            document.body.classList.toggle("dark");/*Toggles the "dark" class on the body element, which changes the background and text colors for dark mode*/     
+        }
+        //🎨Random Color
+        function changeColor(){
+            let colors= ["red","blue","green","yellow","purple","orange"];/*Defines an array of color options*/
+            let i=Math.floor(Math.random()*colors.length);/*Generates a random index to select a color from the colors array*/
+            document.body.style.backgroundColor = colors[i];/*Changes the background color of the body to the selected color*/
+        }
+        //⏰Clock
+        function showTime(){
+            let now=new Date();/*Creates a new Date object to get the current date and time*/
+            document.getElementById("clock").innerHTML=now.toLocaleTimeString();/*Updates the inner HTML of the element with id "clock" to display the current time in a localized format*/
+            /*The toLocaleTimeString() method converts the time portion of the Date object into a string based on the user's locale settings, providing a formatted time display.*/
+            
+        }
+        setInterval(showTime,1000);/*Calls the showTime function every 1000 milliseconds (1 second) to continuously update the clock display*/
+        //📝To Do List
+        function addTask(){
+            let task=document.getElementById("task");/*Gets the value entered in the input field with id "task" and stores it in the variable task*/
+            let li=document.createElement("li");/*Creates a new list item (li) element*/
+            li.textContent=task;/*Sets the text content of the list item to the value of the task variable*/
+            document.getElementById("list").appendChild(li);/*Appends the newly created list item to the unordered list with id "list"*/
+        }
+        //🔐 Password Toggle Show/hide
+        //By Changing the property type of the input
+        function togglePassword(){
+            let p=document.getElementById("pass");/*Gets the input element with id "pass" and stores it in the variable pass*/
+            p.type=p.type==="password"?"text":"password";/*Toggles the type attribute of the input element between "password" and "text" to show or hide the password*/
+        }
+        //✍️ Character Counter
+        function countChars(){
+            let text=document.getElementById("text").value;/*Gets the value entered in the textarea with id "text" and stores it in the variable text*/
+            document.getElementById("count").textContent=text.length;/*Updates the text content of the element with id "count" to display the number of characters in the text variable*/
+        }
+    </script>
+</body>
+</html>

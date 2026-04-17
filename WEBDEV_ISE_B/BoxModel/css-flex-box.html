@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Demo</title>
+    <style>
+        .container{
+            display: flex;/*Enables flexbox layout*/
+            justify-content: space-evenly;/*Allign items horizontally*/
+            align-items: center;/*Aligns items vertically*/
+            height: 200px;/*Height of the container*/
+            background-color: #f0f0f0;/*Background color of the container*/
+
+        }
+        .box{
+            width: 100px;/*Width of each item*/
+            height: 100px;/*Height of each item*/
+            background-color: orange;/*Background color of each item*/
+            color: white;/*Text color of each item*/
+            display: flex;/*Enables flexbox layout for the item*/
+            justify-content: center;/*Centers text horizontally*/
+            align-items: center;/*Centers text vertically*/ 
+            border-radius: 5px;/*Rounded corners for each item*/
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);/*Adds a subtle shadow to each item*/
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>CSS Flexbox Demo</h2>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+</html>

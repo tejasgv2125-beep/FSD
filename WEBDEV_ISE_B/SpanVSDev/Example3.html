@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using both SPAN and DIV together</title>
+    <style>
+        /* to target the outer div we use .card */
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+           
+        }
+        /* to target the inner span we use .badge */
+        .badge {
+            background: #e1f5ee;
+            color: #085041;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .price {
+            color: rgb(213, 8, 8);
+            font-weight: 600;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+<p>status: <span class="badge" >Active</span></p>
+<p>price: <span class="price" >499</span></p>
+
+
+    </div>
+    
+</body>
+
+</html>
