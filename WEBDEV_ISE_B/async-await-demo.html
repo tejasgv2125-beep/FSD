@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async|Await demo|Using JavaScript</title>
+    <style>
+        body{
+            font-family: Arial;
+    
+            text-align: center;
+            margin: top 50px;
+            background-color: bisque;
+
+        }
+        h2{
+            color: black;
+        }
+        button{
+            padding: 10px 15px;
+            font-size: 15px;
+            margin: 5%;
+            cursor: pointer;
+            border: none;
+            background-color: #4caf50;
+            color:white
+
+        }
+        button:hover{
+            opacity: 0.5;
+        }
+        p{
+            font-size: 18px;
+            padding:8px;
+        }
+        #a{
+            color:orange;
+        }
+        #b{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pizza Demo🍕</h2>
+    <button>Start Demo</button>
+    <button onclick="alert('Playing soothing Music by Arijit Singh')">Play Some Music🎵🎶🎧</button>
+    <p id="a">Person A: IDLE</p>
+    <p id="b">Person B: IDLE</p>
+    <script>
+        function orderPizza(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve("Pizza is ready🍕");
+                },10000);
+            });
+        }
+        async function PersonA(){
+            let a=document.getElementById("a");
+            a.innerText="Person A: Ordering Pizza⏳";
+            let result=await orderPizza();
+            a.style.color="orange";
+            a.innerText="Person A: " + result; //Pizza is ready
+            a.style.color="green";//green color for ready pizza
+        }
+        async function PersonB(){
+            let b=document.getElementById("b");
+            b.innerText="Person B: Ordering Pizza⏳";
+            let result=await orderPizza();
+            b.style.color="blue";
+            b.innerText="Person B: " + result; //Pizza is ready
+            b.style.color="green";//green color for ready pizza
+        }
+        function start(){
+            personA();
+            personB();
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showImage()">Show Image</button>
+    <div id="imgBox"></div>
+    <script>
+        function showImage(){
+            let img=document.createElement("img");
+            img.src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFyaXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60";
+            img.width=150;
+            img.style.borderRadius="10px";
+            img.style.margin="5px";
+    
+
+
+            document.getElementById("imgBox").appendChild(img);
+        }
+    </script>
+    
+</body>
+</html>

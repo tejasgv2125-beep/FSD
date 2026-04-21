@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="createCard()">Create Card</button>
+    <div id="container"></div>
+
+    <script>
+      function createCard() {
+        let div = document.createElement("div");
+        div.style.color = "white";
+        div.innerText = "Hello Student 🚀";
+        div.style.border = "1px solid black";
+        div.style.background = "#333";
+        div.style.padding = "15px 25px";
+        div.style.borderRadius = "10px";
+        div.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+        div.style.width = "220px";
+        div.style.textAlign = "center";
+        div.style.fontFamily = "Segoe UI, sans-serif";
+        div.style.margin = "50px auto";
+        document.getElementById("container").appendChild(div);
+      }
+    </script>
+  </body>
+</html>
