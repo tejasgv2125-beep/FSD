@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-4">
+    <h2 class="text-center">Student list</h2>
+    <h5 class="text-center" id="pageNumber"></h5>
+
+    <table class="table table-bordered text-center mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody> <!-- FIXED -->
+    </table>
+
+    <div class="text-center">
+        <button onclick="prevPage()" class="btn btn-primary">Previous</button>
+        <button onclick="nextPage()" class="btn btn-success">Next</button>
+    </div>
+</div>
+
+<script>
+let data = [
+    {id:1, name:"Sidharth"},
+    {id:2, name:"Priyanshu"},
+    {id:3, name:"ShreeHarsha"},
+    {id:4, name:"Shreryas"},
+    {id:5, name:"Ramith"},
+    {id:6, name:"Shalu Kumari"},
+    {id:7, name:"Simmi Roy"},
+    {id:8, name:"Anupriya"},
+    {id:9, name:"Shaistha"},
+    {id:10, name:"Srushti"},
+];
+
+let curentPage = 1;
+let rowsperPage = 3;
+
+function displayTable(){
+    let tableBody = document.getElementById("tableBody"); // FIXED
+    tableBody.innerHTML = "";
+
+    let start = (curentPage - 1) * rowsperPage;
+
+    for(let i = start; i < start + rowsperPage; i++){
+        if(i >= data.length) break;
+
+        tableBody.innerHTML +=
+            "<tr><td>" + data[i].id + "</td><td>" + data[i].name + "</td></tr>";
+    }
+
+    document.getElementById("pageNumber").innerText = "Page " + curentPage;
+}
+
+// Previous button
+function prevPage(){
+    if(curentPage > 1){
+        curentPage--; // FIXED
+    }
+    displayTable();
+}
+
+// Next button
+function nextPage(){
+    if(curentPage * rowsperPage < data.length){
+        curentPage++; // FIXED
+    }
+    displayTable();
+}
+
+// Load table
+displayTable();
+</script>
+
+</body>
+</html>
