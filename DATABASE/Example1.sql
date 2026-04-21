@@ -27,6 +27,5 @@ DESC student;
 select * from student;
 
 
-
  
 
