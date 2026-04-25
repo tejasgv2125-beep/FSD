@@ -194,7 +194,5 @@ SELECT e.emp_name AS Employee, m.emp_name AS Manager
 FROM Employee e
 LEFT JOIN Employee m ON e.manager_id = m.emp_id;
 
-select * from Employee;
 
- 
-
+  
